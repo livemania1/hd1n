@@ -137,180 +137,86 @@
     </div>
 
  
-<html>
-<head>
-<title></title>
-<meta charset="UTF-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.css"/>
-<script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js"></script>
-<style>
-html {
-font-family: sans-serif;
-background: #000;
-}
-.plyr {
-height: 100%;
-width :100%;
-}
-:root {
---plyr-color-main: #d9230f;
-}
-.loading {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        z-index: 9999;
-    }
-    
-    .loading-text {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        text-align: center;
-        width: 100%;
-        height: 100px;
-        line-height: 100px;
-    }
-    
-    .loading-text span {
-        display: inline-block;
-        margin: 0 5px;
-        color: #00b3ff;
-        font-family: 'Quattrocento Sans', sans-serif;
-    }
-    
-    .loading-text span:nth-child(1) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(2) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0.2s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(3) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0.4s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(4) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0.6s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(5) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 0.8s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(6) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1s infinite linear alternate;
-    }
-    
-    .loading-text span:nth-child(7) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1.2s infinite linear alternate;
-    }
-    .loading-text span:nth-child(8) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1.4s infinite linear alternate;
-    }
-    .loading-text span:nth-child(9) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1.6s infinite linear alternate;
-    }
-    .loading-text span:nth-child(10) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 1.8s infinite linear alternate;
-    }
-    .loading-text span:nth-child(11) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 2s infinite linear alternate;
-    }
-    .loading-text span:nth-child(12) {
-        filter: blur(0px);
-        animation: blur-text 1.5s 2.2s infinite linear alternate;
-    }
-    @keyframes blur-text {
-        0% {
-            filter: blur(0px);
-        }
-        100% {
-            filter: blur(4px);
-        }
-    }
 
-    .plyr__video-wrapper::before {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 10;
-        content: '';
-        height: 35px;
-        width: 35px;
-        background-size: 35px auto, auto;
-    }
 
-</style>
+<title>TEN CRICKET</title>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/shaka-player.ui.min.js"></script><style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style><input type="hidden" id="inject_idm_text_selection"><style></style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.6/controls.min.css" rel="stylesheet">
 </head>
-</div>
-<div>
-<video autoplay controls crossorigin playsinline>
-<source type="application/vnd.apple.mpegurl" src="https://hugh.cdn.rumble.cloud/live/gi29le7p/slot-1/s3p9-mhe1/chunklist.m3u8"></video>
-</video>
-</div>
-</body>
+<body bgcolor="black" style="margin:0;">
+<center>
+    <div data-shaka-player-container="" style="width: 100%; height: 100%; cursor: none;" class="shaka-mobile shaka-video-container" shaka-controls="true">
+        <video poster="#" autoplay="" data-shaka-player="" id="video" style="width: 100%; height: 100%;" class="shaka-video" src="blob:https://t20wc.pages.dev/da763d4e-fd51-4e2a-a817-2b73e4643682"></video>
+</center>
+<style>
+ .shaka-spinner-container{display:none;} 
+</style>
 <script>
- setTimeout(videovisible, 3000)
-function videovisible() {
-    document.getElementById('loading').style.display = 'none'
+    if(confirm("Join Our Telegram Channel @live match")) { window.location.href = "https://t.me/cricket_mania_246" }
+const manifestUri =
+    'https://sundirectgo-live.pc.cdn.bitgravity.com/src635/dth.mpd';
+async function init() {
+  // When using the UI, the player is made automatically by the UI object.
+  const video = document.getElementById('video');
+  const ui = video['ui'];
+  const controls = ui.getControls();
+  const player = controls.getPlayer();
+  const config = {
+  'controlPanelElements': ['play_pause', 'time_and_duration', 'spacer', 'mute', 'picture_in_picture', 'playback_rate', 'quality', 'fullscreen'],
+  'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
 }
-document.addEventListener("DOMContentLoaded", () => {
-const e = document.querySelector("video"),
-n = e.getElementsByTagName("source")[0].src,
-o = {};
-if(Hls.isSupported()) {
-var config = {
-maxMaxBufferLength: 100,
-};
-const t = new Hls(config);
-t.loadSource(n), t.on(Hls.Events.MANIFEST_PARSED, function(n, l) {
-const s = t.levels.map(e => e.height);
-o.quality = {
-default: s[0],
-options: s,
-forced: !0,
-onChange: e => (function(e) {
-window.hls.levels.forEach((n, o) => {
-n.height === e && (window.hls.currentLevel = o)
-})
-})(e)
-};
-new Plyr(e, o)
-}), t.attachMedia(e), window.hls = t
-} else {
-new Plyr(e, o)
-}
+ui.configure(config);
+player.configure({
+  drm: {
+    clearKeys: {
+      // 'key-id-in-hex': 'key-in-hex',
+     '19bbff3cf0d0c91198947c63018ec66e': '90a1fb2f173ca5312f25cdd4d166cd33',
+    }
+  }
 });
-  </script>
-<script>  if(confirm("join telegram channel")) {
-    window.location.href = "https://t.me/cricket_mania_246"
+  // Attach player and ui to the window to make it easy to access in the JS console.
+  window.player = player;
+  window.ui = ui;
+  // Listen for error events.
+  player.addEventListener('error', onPlayerErrorEvent);
+  controls.addEventListener('error', onUIErrorEvent);
+  // Try to load a manifest.
+  // This is an asynchronous process.
+  try {
+    await player.load(manifestUri);
+    // This runs if the asynchronous load is successful.
+    console.log('The video has now been loaded!');
+  } catch (error) {
+    onPlayerError(error);
+  }
 }
-</script>
-  </body>
-  </html>   
+function onPlayerErrorEvent(errorEvent) {
+  // Extract the shaka.util.Error object from the event.
+  onPlayerError(event.detail);
+}
+function onPlayerError(error) {
+  // Handle player error
+  console.error('Error code', error.code, 'object', error);
+}
+function onUIErrorEvent(errorEvent) {
+  // Extract the shaka.util.Error object from the event.
+  onPlayerError(event.detail);
+}
+function initFailed(errorEvent) {
+  // Handle the failure to load; errorEvent.detail.reasonCode has a
+  // shaka.ui.FailReasonCode describing why.
+  console.error('Unable to load the UI library!');
+}
+// Listen to the custom shaka-ui-loaded event, to wait until the UI is loaded.
+document.addEventListener('shaka-ui-loaded', init);
+// Listen to the custom shaka-ui-load-failed event, in case Shaka Player fails
+// to load (e.g. due to lack of browser support).
+document.addEventListener('shaka-ui-load-failed', initFailed);</script>
+
+</body></html>  
 <script>
 
         // Prevent the default action of the link
